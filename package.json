@@ -7,9 +7,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@arco-design/web-react": "^2.60.0",
-    "dayjs": "^1.10.0"
-  }
+  "license": "ISC"
 }

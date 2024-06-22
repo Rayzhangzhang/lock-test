@@ -4,13 +4,27 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  '@arco-design/web-react':
-    specifier: ^2.60.0
-    version: 2.60.0(react-dom@18.3.1)(react@18.3.1)
-  dayjs:
-    specifier: ^1.10.0
-    version: 1.10.0
+importers:
+
+  .: {}
+
+  app/a:
+    dependencies:
+      '@arco-design/web-react':
+        specifier: ^2.63.0
+        version: 2.63.0(react-dom@18.3.1)(react@18.3.1)
+
+  app/b:
+    dependencies:
+      '@arco-design/web-react':
+        specifier: ^2.60.0
+        version: 2.60.0(react-dom@18.3.1)(react@18.3.1)
+
+  app/c:
+    dependencies:
+      '@arco-design/web-react':
+        specifier: ^2.60.0
+        version: 2.60.0(react-dom@18.3.1)(react@18.3.1)
 
 packages:
 
@@ -22,6 +36,32 @@ packages:
 
   /@arco-design/web-react@2.60.0(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-yIv23vXXkJDQplWkjkAgggVrk61MvLY3UX2W2n09xn4VQOHyHFRIkJ00z/rtTZegDoPhS9v2HKrDl/Bk8r0P+w==}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      '@arco-design/color': 0.4.0
+      '@babel/runtime': 7.24.7
+      b-tween: 0.3.3
+      b-validate: 1.5.3
+      compute-scroll-into-view: 1.0.20
+      dayjs: 1.11.11
+      lodash: 4.17.21
+      number-precision: 1.6.0
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-focus-lock: 2.12.1(react@18.3.1)
+      react-is: 18.3.1
+      react-transition-group: 4.4.5(react-dom@18.3.1)(react@18.3.1)
+      resize-observer-polyfill: 1.5.1
+      scroll-into-view-if-needed: 2.2.20
+      shallowequal: 1.1.0
+    transitivePeerDependencies:
+      - '@types/react'
+    dev: false
+
+  /@arco-design/web-react@2.63.0(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-n+vhyjCa4OzRBq2/guKmNUKoRj/iwltvGvGT6K+1vL4jpl2LR6pnr6BHXUiSe5lEYAFXeRhvFRmnv8CrXi0nMg==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
@@ -99,10 +139,6 @@ packages:
 
   /csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
-    dev: false
-
-  /dayjs@1.10.0:
-    resolution: {integrity: sha512-U/yusl5TQPvU1Tlhsu3A82Ebn4BNKHJMIk9AePYHCmGtTXcuPkODiEhkzqA8mnQ0bbgoR6+oha2ioZEewOiP2A==}
     dev: false
 
   /dayjs@1.11.11:
